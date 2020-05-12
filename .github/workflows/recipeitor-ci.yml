@@ -32,6 +32,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
 
+      # Here we install the dependencies
+      - name: Installing dependencies
+        run: npm install
+
       # Here we run the linters
       - name: Launching linters
         run: npm run lint
