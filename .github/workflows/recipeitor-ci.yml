@@ -39,6 +39,7 @@ jobs:
       # Here we run the linters
       - name: Launching linters
         run: npm run lint
+
       # Here we run the tests
-      # - name: Launching tests
-      #   run: yarn test
+      - name: Launching tests
+        run: yarn test
