@@ -31,4 +31,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-          yarn lint
+      # Here we run the linters
+      # - name: Launching linters
+      #   run: yarn lint
+      # Here we run the tests
+      # - name: Launching tests
+      #   run: yarn test
