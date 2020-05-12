@@ -4,9 +4,7 @@ import homeStyles from './home.css';
 
 const Home = () => (
   <div className={homeStyles.container}>
-    <div data-testid="message">
-      Hello World!
-    </div>
+    <div data-testid="message">Hello World!</div>
   </div>
 );
 
