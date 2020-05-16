@@ -1,11 +1,19 @@
 const CustomWebpack = require('../webpack.config.js');
 
 module.exports = {
-  stories: ['../src/**/*.stories.{js,tsx}'],
+  stories: ['../src/**/*.(story|stories).{js,tsx,mdx}'],
   addons: [
     '@storybook/addon-actions',
     '@storybook/addon-links',
-    '@storybook/addon-viewport/register',
+    '@storybook/addon-viewport',
+    {
+      name: '@storybook/addon-docs/preset',
+      options: {
+        configureJSX: true,
+        babelOptions: {},
+        sourceLoaderOptions: null,
+      },
+    },
   ],
   webpackFinal: async config => {
     const customWebpack = CustomWebpack(null, { mode: 'development' });
