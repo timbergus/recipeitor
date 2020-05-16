@@ -1,11 +1,17 @@
 {
   "compilerOptions": {
+    "strict": true,
     "jsx": "react",
     "target": "ES5",
+    "module": "ESNext",
     "sourceMap": true,
     "noImplicitAny": true,
     "esModuleInterop": true,
-    "moduleResolution": "node",
-    "types": ["jest", "node"]
+    "moduleResolution": "Node",
+    "noEmitOnError": true,
+    "types": [
+      "jest",
+      "node"
+    ]
   }
 }
