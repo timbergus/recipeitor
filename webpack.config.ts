@@ -12,16 +12,13 @@ module.exports = (_: undefined, { mode }: { mode: string }) => ({
     filename: '[hash].bundle.js',
     path: resolve('dist'),
   },
-  devtool: mode === 'production'
-    ? 'source-map'
-    : 'eval',
+  devtool: mode === 'production' ? 'source-map' : 'eval',
   devServer: {
     contentBase: resolve('dist'),
     compress: true,
     inline: true,
     hot: true,
     port: 5000,
-    open: true,
   },
   module: {
     rules: [
@@ -34,9 +31,7 @@ module.exports = (_: undefined, { mode }: { mode: string }) => ({
         test: /\.css$/i,
         exclude: /node_modules/,
         use: [
-          mode === 'production'
-            ? MiniCssExtractPlugin.loader
-            : 'style-loader',
+          mode === 'production' ? MiniCssExtractPlugin.loader : 'style-loader',
           {
             loader: 'css-loader',
             options: {
@@ -47,9 +42,7 @@ module.exports = (_: undefined, { mode }: { mode: string }) => ({
             loader: 'postcss-loader',
             options: {
               indent: 'postcss',
-              plugins: () => ([
-                autoprefixer(),
-              ]),
+              plugins: () => [autoprefixer()],
             },
           },
         ],
