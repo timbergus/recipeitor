@@ -1,10 +1,10 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-import autoprefixer from 'autoprefixer';
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const autoprefixer = require('autoprefixer');
 
-import { resolve } from 'path';
+const { resolve } = require('path');
 
-module.exports = (_: undefined, { mode }: { mode: string }) => ({
+module.exports = (_, { mode }) => ({
   entry: {
     app: ['@babel/polyfill', resolve('src', 'index.tsx')],
   },
